@@ -542,10 +542,15 @@
 		margin: 0px;
 		padding: 0px;
 	}
-	
-		.inputField #comment, #adresseDepart, #postaleDepart, #villeDepart, #paysDepart, #adresseDest, #postaleDest, #villeDest, #paysDest
+		.inputField #bookDate, #bookHour, #bookMinute, #numberOfPersonne
+		{
+			border: 1px solid #999;
+		}
+		
+		.inputField #comment, #adresseDepart, #postaleDepart, #villeDepart, #paysDepart, #adresseDest, #postaleDest, #villeDest, #paysDest, #lastName, #firstName, #phone, #firm, #mail
 		{
 			width: 300px;
+			border: 1px solid #999;
 		}
 	
 	
