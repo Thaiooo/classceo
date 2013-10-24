@@ -4,7 +4,11 @@
         <meta name="layout" content="main" />
         <script>
         $(function() {
-        	$( "#datepicker" ).datepicker( $.datepicker.regional[ "fr" ] );
+        	$( "#bookDate" ).datepicker( $.datepicker.regional[ "fr" ] );
+
+        	$( "#submitForm" ).click(function() {
+        		$( "#bookForm" ).submit();
+        	});
 		});
         </script>
         
@@ -36,24 +40,24 @@
 									
 									<div class="book">
 									
-									<g:form controller="book" method="post" >
+									<g:form name="bookForm" controller="book" method="post" action="bookStep2">
 									
 										<h3>Informations</h3>
 										<p class="label">Date</p>
 										<p class="inputField">
-											<input type="text" id="datepicker" size="10"/>
+											<input type="text" id="bookDate" name="bookDate" size="10"/>
 											<g:select name="bookHour" from="${0..23}" value="" noSelection="['':'HH']"/> :
 											<g:select name="bookMinute" from="${['0','15','30','45']}" value="" noSelection="['':'MM']"/>
 										</p>
 										
 										<p class="label">Nb Personne</p>
 										<p class="inputField">
-											<g:select name="numberOfPersonne" from="${1..100}" value=""/>
+											<g:select name="numberOfPersonne" from="${1..100}" value="${book.numberOfPersonne}"/>
 										</p>
 										
 										<p class="label">Commentaire</p>
 										<p class="inputField">
-											<g:textArea id="comment" name="comment" value="" rows="4" cols="40" class="no_barre"/>
+											<g:textArea id="comment" name="comment" value="${book.comment}" rows="4" cols="40" class="no_barre"/>
 										</p>
 										
 										
@@ -75,7 +79,7 @@
 										
 										<p class="label">Pays</p>
 										<p class="inputField">
-											<input type="text" id="paysDepart" size="10"/>
+											<g:select name="paysDepart" from="${['Allemange','Belgique','Espagne','France','Luxembourg','Italie','Suisse']}" value="France"/>
 										</p>
 										
 										<h3>Destination</h3>
@@ -96,11 +100,11 @@
 										
 										<p class="label">Pays</p>
 										<p class="inputField">
-											<input type="text" id="paysDest" size="10"/>
+											<g:select name="paysDest" from="${['Allemange','Belgique','Espagne','France','Luxembourg','Italie','Suisse']}" value="France"/>
 										</p>
 										
 										<p class="submiField">
-											<a href="<g:createLink controller="page" action="prestations" />" class="button button-small button-icon button-icon-arrow">Suivant</a>
+											<a href="#" id="submitForm" class="button button-small button-icon button-icon-arrow">Suivant</a>
 										</p>
 									</g:form>
 									
