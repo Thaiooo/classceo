@@ -7,6 +7,12 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700" rel="stylesheet" />
 		<script src="${resource(dir:'js',file:'jquery-1.8.3.min.js')}"></script>
+		<script src="${resource(dir:'js',file:'jquery.ui.core.min.js')}"></script>
+		<script src="${resource(dir:'js',file:'jquery.ui.datepicker.min.js')}"></script>
+		<script src="${resource(dir:'js',file:'jquery.ui.datepicker-fr.js')}"></script>	
+		<link rel="stylesheet" href="${resource(dir:'css/minified',file:'jquery-ui.min.css')}">
+		<link rel="stylesheet" href="${resource(dir:'css/minified',file:'jquery.ui.core.min.css')}">
+		<link rel="stylesheet" href="${resource(dir:'css/minified',file:'jquery.ui.datepicker.min.css')}">
 		<script src="${resource(dir:'css/5grid',file:'init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none&amp;mobileUI.titleBarHeight=0')}"></script>
 		<script src="${resource(dir:'js',file:'jquery.dropotron-1.2.js')}"></script>
 		<script type="text/javascript" src="${resource(dir:'js',file:'jquery.slidertron-1.2.js')}"></script>
