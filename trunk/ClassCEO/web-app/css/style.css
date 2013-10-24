@@ -1,0 +1,632 @@
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	*
+	{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	body
+	{
+		background: #ececec;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 10pt;
+		color: #3d3d3d;
+	}
+
+	form
+	{
+	}
+	
+		form input,
+		form select,
+		form textarea
+		{
+			-webkit-appearance: none;
+		}
+			
+	br.clear
+	{
+		clear: both;
+	}
+	
+	h1, h2, h3
+	{
+		font-weight: 300;
+		color: #262626;
+	}
+	
+	p, ul, ol, dl, table
+	{
+		margin-bottom: 1em;
+	}
+	
+	p
+	{
+		line-height: 2em;
+	}
+	
+	a
+	{
+		color: #0087cd;
+	}
+	
+	section,
+	article
+	{
+		margin-bottom: 3em;
+	}
+	
+	section > :last-child,
+	article > :last-child
+	{
+		margin-bottom: 0;
+	}
+
+	section:last-child,
+	article:last-child
+	{
+		margin-bottom: 0;
+	}
+
+	.image
+	{
+		display: inline-block;
+	}
+	
+		.image img
+		{
+			display: block;
+			width: 100%;
+		}
+
+	.image-full
+	{
+		display: block;
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
+	
+	.image-left
+	{
+		float: left;
+		margin: 0 2.5em 2em 0;
+	}
+	
+		.image-left img
+		{
+			position: relative;
+			top: 0.35em;
+		}
+	
+	.image-centered
+	{
+		display: block;
+		margin: 0 0 2em 0;
+	}
+
+		.image-centered img
+		{
+			margin: 0 auto;
+			width: auto;
+		}
+
+	.button
+	{
+		display: inline-block;
+		padding: 1.10em 0em 1.10em 1.25em;
+		background: #0087cd url(images/bg05.png) no-repeat right top;
+		background-size: 100% 100%;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-o-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+		text-decoration: none;
+		font-size: 1.10em;
+		color: #FFFFFF;
+		outline: 0;
+	}	
+
+		.button:hover
+		{
+			background-color: #119ee7;
+		}
+		
+		.button:active
+		{
+			background-color: #007cc2;
+		}
+		
+		.button-icon
+		{
+			position: relative;
+		}
+		
+			.button-icon:after
+			{
+				content: '';
+				display: inline-block;
+				width: 50px;
+			}
+		
+			.button-icon:before
+			{
+				content: '';
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background: url('images/icons.png');
+				position: absolute;
+				right: 1.25em;
+				top: 50%;
+				margin-top: -24px;
+			}
+			
+			.button-icon-arrow:before
+			{
+				background-position: -55px -27px;
+			}
+			
+			.button-icon-big-arrow:before
+			{
+				width: 70px;
+				height: 70px;
+				background-position: -0px -14px;
+				right: 10px;
+			}
+
+			.button-icon-banner-arrow:before
+			{
+				background-position: -55px -14px;
+				opacity: .40;
+				right: 15px;
+			}
+
+			.button-icon-paper:before
+			{
+				background-position: -48px 0px;
+			}
+	
+			.button-icon-question:before
+			{
+				background-position: 0px -48px;
+			}
+
+	.button-padding
+	{
+		margin-top: 1em;
+	}
+	
+	.button-alt
+	{
+		background-color: #d93d00;
+	}
+
+		.button-alt:hover
+		{
+			background-color: #f35111;
+		}
+		
+		.button-alt:active
+		{
+			background-color: #d43800;
+		}
+	
+	.button-alt2
+	{
+		background-color: #414141;
+	}
+
+		.button-alt2:hover
+		{
+			background-color: #575757;
+		}
+		
+		.button-alt2:active
+		{
+			background-color: #363636;
+		}
+
+	
+		.button-small
+		{
+		}
+		
+		.button-big
+		{
+			width: 100%;
+			font-size: 2em;
+			padding: 1.30em 0em 1.30em 0;
+			font-weight: 300;
+			text-align: center;
+		}
+
+			.button-icon-follow
+			{
+				padding: 0;
+				line-height: 80px;
+			}
+
+			.button-icon-follow:after
+			{
+				display: none;
+			}
+
+			.button-icon-follow:before
+			{
+				width: 50px;
+				height: 50px;
+				display: inline-block;
+				position: relative;
+				left: 0;
+				right: 0;
+				top: 18px;
+				margin: 0 8px 0 0;
+			}
+		
+			.button-icon-follow1:before
+			{
+				background-position: 9px -100px;
+			}
+			
+			.button-icon-follow2:before
+			{
+				background-position: -60px -100px;
+			}
+			
+			.button-icon-follow3:before
+			{
+				background-position: -130px -100px;
+			}
+
+		.button-huge
+		{
+			width: 100%;
+			font-size: 2em;
+			padding: 1.25em 1em 1.5em 1em;
+			letter-spacing: -1px;
+		}
+		
+			.button-huge span
+			{
+				font-size: 0.70em !important;
+				font-weight: 300;
+				letter-spacing: 0px;
+				opacity: 0.65;
+			}
+		
+
+	ul.style1
+	{
+	}
+	
+		ul.style1 li
+		{
+			padding: 1em 0em;
+			border-top: 1px solid #e0e0e0;
+		}
+		
+		ul.style1 a
+		{
+		}
+			
+			ul.style1 a:hover
+			{
+				text-decoration: none;
+			}
+		
+		ul.style1 .first
+		{
+			padding-top: 0em;
+			border-top: none;	
+		}
+	
+	ul.style2
+	{
+	}
+	
+		ul.style2 li
+		{
+			clear: both;
+			padding: 2em 0em 1em 0em;
+			border-top: 1px solid #e0e0e0;
+		}
+		
+		ul.style2 a
+		{
+			text-decoration: none;
+			color: #7f7f7f;
+		}
+		
+			ul.style2 a:hover
+			{
+				text-decoration: underline;
+			}
+		
+		ul.style2 h3
+		{
+			letter-spacing: -2px;
+			font-weight: 200;
+			margin: 0;
+		}
+		
+			ul.style2 h3 a
+			{
+				display: block;
+				padding: 0.25em 0em 0.75em 0em;
+				color: #262626;
+			}
+		
+		ul.style2 .first
+		{
+			padding-top: 0em;
+			border-top: none;
+		}
+
+	ul.style3
+	{
+	}
+
+		ul.style3 li
+		{
+			padding: 1em 0em;
+			line-height: 2.50em;
+		}
+		
+		ul.style3 a
+		{
+			display: block;
+			height: 40px;
+			padding-left: 4.5em;
+		}
+		
+			ul.style3 a:hover
+			{
+				text-decoration: none;
+			}
+		
+		ul.style3 .nopad
+		{
+			display: block;
+			line-height: 1.40em;
+		}
+		
+		ul.style3 .link a
+		{
+			text-decoration: none;
+			color: #7f7f7f;
+		}
+		
+		ul.style3 .first
+		{
+			padding-top: 0;
+		}
+	
+		.email
+		{
+			position: relative;
+			background-position: 0px -182px;
+		}
+		
+			.email:after
+			{
+				content: '';
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				background: url('images/icons.png');
+				position: absolute;
+			}
+			
+			.email:before
+			{
+				content: '';
+				display: inline;
+				width: 32px;
+				padding-left: 25px;
+				margin-left: 0.25em;
+			}
+
+	.subtitle
+	{
+		font-weight: 300;
+		color: #a0a0a0;
+		text-align: left !important;
+	}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	#header-wrapper
+	{
+		position: relative;
+		background: #080808 url(images/bg01.jpg) repeat;
+		top: 0;
+	}
+	
+		#header-wrapper:before
+		{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(images/bg03.png);
+			background-size: 100% 100%;
+		}
+	
+	#banner-wrapper
+	{
+		position: relative;
+		width: 100%; 
+		background: #212121 url(images/bg02.jpg) repeat;
+	}
+	
+		#banner-wrapper:before
+		{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-image: url(images/bg04.png);
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+		}
+	
+	#featured-wrapper
+	{
+		position: relative;
+		background: #FFFFFF;
+	}
+	
+	#main-wrapper
+	{
+		position: relative;
+		background: #FFFFFF;
+	}
+
+		.homepage #main-wrapper
+		{
+			background: #f6f6f6;
+		}
+	
+	#footer-wrapper
+	{
+		position: relative;
+	}
+	
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	#banner
+	{
+		position: relative;
+		z-index: 1;
+	}
+	
+		#banner .image-full
+		{
+			line-height: 0;
+			margin: 0;
+		}
+
+/*********************************************************************************/
+/* Slider                                                                        */
+/*********************************************************************************/
+
+	#slider
+	{
+		background: #111;
+	}
+
+/*********************************************************************************/
+/* Featured                                                                      */
+/*********************************************************************************/
+	
+	#featured
+	{
+		overflow: hidden;
+	}
+		
+		#featured h2
+		{
+			font-weight: 200;
+		}
+	
+		#featured h3
+		{
+			font-weight: 300;
+		}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		overflow: hidden;
+	}
+	
+		#footer h2
+		{
+			letter-spacing: -1px;
+		}
+	
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright 
+	{
+		text-align: center;
+		color: #b8b8b8;
+	}
+
+		.contact-icon
+		{
+			position: relative;
+		}
+		
+			.contact-icon:after
+			{
+				content: '';
+				display: inline-block;
+				width: 40px;
+			}
+		
+			.contact-icon:before
+			{
+				content: '';
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				background: #414141 url('images/icons.png');
+				-moz-transition: background-color .25s ease-in-out;
+				-webkit-transition: background-color .25s ease-in-out;
+				-o-transition: background-color .25s ease-in-out;
+				-ms-transition: background-color .25s ease-in-out;
+				transition: background-color .25s ease-in-out;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -24px;
+			}
+				
+				.contact-icon:hover:before
+				{
+					background-color: #474747;	
+				}
+
+				.contact-icon:active:before
+				{
+					background-color: #545454;	
+				}
+			
+			.contact-icon-email:before
+			{
+				background-position: 8px -172px;
+			}
+
+			.contact-icon-address:before
+			{
+				background-position: -41px -172px;
+			}
+			.contact-icon-comment:before
+			{
+				background-position: -92px -172px;
+			}
+			.contact-icon-telephone:before
+			{
+				background-position: -143px -172px;
+			}
