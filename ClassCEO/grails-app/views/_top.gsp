@@ -53,7 +53,7 @@
 										<g:else>
 											<li>
 										</g:else>
-										<a href="<g:createLink controller="page" action="reservation" />">Service réservation</a>
+										<a href="<g:createLink controller="book" action="bookStep1" />">Service réservation</a>
 										</li>
 									</ul>
 								</nav>
