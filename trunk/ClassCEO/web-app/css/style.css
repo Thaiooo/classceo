@@ -499,6 +499,55 @@
 		{
 			background: #f6f6f6;
 		}
+		
+	.book
+	{
+		/*background: yellow;*/
+		margin: 0px;
+		padding: 0px;
+		border: none;
+	}
+	
+		.book h3
+		{
+			/*background: yellow;*/
+			margin-top: 20px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
+			padding: 0px;
+			border: none;
+		}
+	
+	.label
+	{
+		/*background: grey;*/
+		margin: 0px;
+		padding: 0px;
+		border: none;
+	}
+
+	.submiField
+	{
+		margin-top: 20px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding: 0px;
+	}
+		
+	.inputField
+	{
+		/*background: red;*/
+		margin: 0px;
+		padding: 0px;
+	}
+	
+		.inputField #comment, #adresseDepart, #postaleDepart, #villeDepart, #paysDepart, #adresseDest, #postaleDest, #villeDest, #paysDest
+		{
+			width: 300px;
+		}
+	
 	
 	#footer-wrapper
 	{
