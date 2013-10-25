@@ -538,7 +538,6 @@
 		
 	.inputField
 	{
-		/*background: red;*/
 		margin: 0px;
 		padding: 0px;
 	}
@@ -552,6 +551,12 @@
 			width: 300px;
 			border: 1px solid #999;
 		}
+		
+		.errorField
+		{
+			background: red;
+		}
+		
 	
 	
 	#footer-wrapper
