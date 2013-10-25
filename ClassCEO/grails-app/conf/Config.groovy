@@ -52,9 +52,11 @@ grails.spring.bean.packages = []
 environments {
     production {
         grails.serverURL = "http://www.classceo.fr"
+		grails.config.locations = ["classpath:mail-config.groovy"]
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
+		grails.config.locations = ["file:D:/workspaceTest/ClassCEO/config/mail-config.groovy"]
     }
     test {
         grails.serverURL = "http://localhost:8080/${appName}"
