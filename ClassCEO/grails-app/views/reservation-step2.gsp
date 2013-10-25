@@ -42,27 +42,27 @@
 											<h3>Contact</h3>
 											<p class="label">Nom</p>
 											<p class="inputField">
-												<input type="text" id="lastName" />
+												<g:textField name="lastName" value="${book.lastName}"/>
 											</p>
 											
 											<p class="label">Pr&eacute;nom</p>
 											<p class="inputField">
-												<input type="text" id="firstName" />
+												<g:textField name="firstName" value="${book.firstName}"/>
 											</p>
 											
 											<p class="label">Soci&eacute;te</p>
 											<p class="inputField">
-												<input type="text" id="firm" />
+												<g:textField name="firm" value="${book.firm}"/>
 											</p>
 											
 											<p class="label">Mail</p>
 											<p class="inputField">
-												<input type="text" id="mail" />
+												<g:textField name="mail" value="${book.mail}"/>
 											</p>
 											
 											<p class="label">T&eacute;l&eacute;phone</p>
 											<p class="inputField">
-												<input type="text" id="phone" />
+												<g:textField name="phone" value="${book.phone}"/>
 											</p>
 											
 											<p class="submiField">
