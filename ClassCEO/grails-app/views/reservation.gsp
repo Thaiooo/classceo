@@ -38,15 +38,20 @@
 									<h2>R&eacute;servation > Etape 1</h2>
 									
 									<div class="book">
-									
 										<g:form name="bookForm" controller="book" method="post" action="bookStep2">
 										
 											<h3>Informations</h3>
 											<p class="label">Date</p>
 											<p class="inputField">
-												<input type="text" id="bookDate" name="bookDate" size="10" value="<g:formatDate format="dd/MM/yyyy" date="${book.bookDate}"/>" />
-												<g:select name="bookHour" from="${0..23}" value="${book.bookHour}" noSelection="['':'HH']"/> :
-												<g:select name="bookMinute" from="${['0','15','30','45']}" value="${book.bookMinute}" noSelection="['':'MM']"/>
+												<input type="text" id="bookDate" name="bookDate" size="10" value="<g:formatDate format="dd/MM/yyyy" date="${book.bookDate}"/>" 
+													class="${hasErrors(bean:book,field:'bookDate','errorField')}"
+												/>
+												<g:select name="bookHour" from="${0..23}" value="${book.bookHour}" noSelection="['':'HH']"
+													class="${hasErrors(bean:book,field:'bookHour','errorField')}"
+												/> :
+												<g:select name="bookMinute" from="${['0','15','30','45']}" value="${book.bookMinute}" noSelection="['':'MM']"
+													class="${hasErrors(bean:book,field:'bookMinute','errorField')}"
+												/>
 											</p>
 											
 											<p class="label">Nb Personne</p>
@@ -63,17 +68,17 @@
 											<h3>D&eacute;part</h3>
 											<p class="label">Adresse</p>
 											<p class="inputField">
-												<g:textField name="adresseDepart" value="${book.adresseDepart}"/>
+												<g:textField name="adresseDepart" value="${book.adresseDepart}" class="${hasErrors(bean:book,field:'adresseDepart','errorField')}"/>
 											</p>
 											
 											<p class="label">Postal</p>
 											<p class="inputField">
-												<g:textField name="postaleDepart" value="${book.postaleDepart}"/>
+												<g:textField name="postaleDepart" value="${book.postaleDepart}" class="${hasErrors(bean:book,field:'postaleDepart','errorField')}"/>
 											</p>
 											
 											<p class="label">Ville</p>
 											<p class="inputField">
-												<g:textField name="villeDepart" value="${book.villeDepart}"/>
+												<g:textField name="villeDepart" value="${book.villeDepart}" class="${hasErrors(bean:book,field:'villeDepart','errorField')}"/>
 											</p>
 											
 											<p class="label">Pays</p>
@@ -84,17 +89,17 @@
 											<h3>Destination</h3>
 											<p class="label">Adresse</p>
 											<p class="inputField">
-												<g:textField name="adresseDest" value="${book.adresseDest}"/>
+												<g:textField name="adresseDest" value="${book.adresseDest}" class="${hasErrors(bean:book,field:'adresseDest','errorField')}"/>
 											</p>
 											
 											<p class="label">Postal</p>
 											<p class="inputField">
-												<g:textField name="postaleDest" value="${book.postaleDest}"/>
+												<g:textField name="postaleDest" value="${book.postaleDest}" class="${hasErrors(bean:book,field:'postaleDest','errorField')}"/>
 											</p>
 											
 											<p class="label">Ville</p>
 											<p class="inputField">
-												<g:textField name="villeDest" value="${book.villeDest}"/>
+												<g:textField name="villeDest" value="${book.villeDest}" class="${hasErrors(bean:book,field:'villeDest','errorField')}"/>
 											</p>
 											
 											<p class="label">Pays</p>
