@@ -83,7 +83,7 @@ class BookController {
 			// TODO Send a email to confirm the book
 			/*
 			mailService.sendMail {
-				to travel.customer.eMail
+				to "quoc.thai.phan@gmail.com"
 				from "no-reply@classceo.fr"
 				subject "Votre réservation Class CEO"
 				body( view:"/mail/bookResume",
