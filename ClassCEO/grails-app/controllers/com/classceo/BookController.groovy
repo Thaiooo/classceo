@@ -50,8 +50,6 @@ class BookController {
 				}
 
 				if(book.hasErrors()){
-					book.errors.allErrors.each { println it }
-
 					validate = false
 				}else{
 					validate = true
@@ -77,14 +75,22 @@ class BookController {
 		book.clearErrors()
 
 		if(!book.validate()){
-			if(book.hasErrors()) {
-				book.errors.allErrors.each { println it }
-			}
-
 			render(view:"/reservation-step2", model:[menu:MenuConstant.RESERVATION, book:book])
 		}else{
 			// TODO Save the book in the database
+
+
 			// TODO Send a email to confirm the book
+			/*
+			mailService.sendMail {
+				to travel.customer.eMail
+				from "no-reply@classceo.fr"
+				subject "Votre réservation Class CEO"
+				body( view:"/mail/bookResume",
+				plugin:"email-confirmation",
+				model:[bool:book])
+			}
+			*/
 
 			session[SessionConstant.BOOK.name()] = null
 			redirect( action: "confirmBook")
