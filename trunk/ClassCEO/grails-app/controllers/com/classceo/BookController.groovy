@@ -9,16 +9,17 @@ class BookController {
 		def book = new Book()
 		book.paysDepart = "France"
 		book.paysDest = "France"
-		render(view:"/reservation", model:[menu:"reservation", book:book])
+		render(view:"/reservation", model:[menu: MenuConstant.RESERVATION, book:book])
 	}
 
 	def backStep1 = {
 		def book = session[SessionConstant.BOOK.name()]
-		render(view:"/reservation", model:[menu:"reservation", book:book])
+		render(view:"/reservation", model:[menu: MenuConstant.RESERVATION, book:book])
 	}
 
 	def bookStep2 = {
 		def book = new Book()
+		book.creationDate = new Date()
 
 		book.properties = params
 		book.clearErrors()
@@ -26,23 +27,6 @@ class BookController {
 		if(StringUtils.isNotBlank(params.bookDate)){
 			book.bookDate = DateUtils.parseDate(params.bookDate)
 		}
-
-		println "==========="
-		println "Date: " + book.bookDate
-		println "H: " + book.bookHour
-		println "M: " + book.bookMinute
-		println "Nb: " + book.numberOfPersonne
-		println "Comment: " + book.comment
-		println "==========="
-		println "Adr Dep: " + book.adresseDepart
-		println "CP Dep:" + book.postaleDepart
-		println "Ville Dep: " + book.villeDepart
-		println "Pays Dep: " + book.paysDepart
-		println "==========="
-		println "Adr D:" + book.adresseDest
-		println "CP D: " + book.postaleDest
-		println "Ville D: " + book.villeDest
-		println "Pays D: " + book.paysDest
 
 		session[SessionConstant.BOOK.name()] = book
 
@@ -55,7 +39,7 @@ class BookController {
 
 				def saveErrors = []
 				currentErrors.each {
-					if(it.getField() != "firstName" && it.getField() != "lastName" && it.getField() != "firm" && it.getField() != "phone" && it.getField() != "mail" ){
+					if(it.getField() != "firstName" && it.getField() != "lastName" && it.getField() != "firm" && it.getField() != "phone" && it.getField() != "mail" && it.getField() != "creationDate"){
 						saveErrors.add(it)
 					}
 				}
@@ -76,9 +60,9 @@ class BookController {
 		}
 
 		if(!validate){
-			render(view:"/reservation", model:[menu:"reservation", book:book])
+			render(view:"/reservation", model:[menu:MenuConstant.RESERVATION, book:book])
 		}else{
-			render(view:"/reservation-step2", model:[menu:"reservation", book:book])
+			render(view:"/reservation-step2", model:[menu:MenuConstant.RESERVATION, book:book])
 		}
 	}
 
@@ -92,38 +76,12 @@ class BookController {
 		book.properties = params
 		book.clearErrors()
 
-
-		println "==========="
-		println "Date: " + book.bookDate
-		println "H: " + book.bookHour
-		println "M: " + book.bookMinute
-		println "Nb: " + book.numberOfPersonne
-		println "Comment: " + book.comment
-		println "==========="
-		println "Adr Dep: " + book.adresseDepart
-		println "CP Dep:" + book.postaleDepart
-		println "Ville Dep: " + book.villeDepart
-		println "Pays Dep: " + book.paysDepart
-		println "==========="
-		println "Adr D:" + book.adresseDest
-		println "CP D: " + book.postaleDest
-		println "Ville D: " + book.villeDest
-		println "Pays D: " + book.paysDest
-		println "==========="
-		println "Nom: " + book.lastName
-		println "Prénom: " + book.firstName
-		println "Firm: " + book.firm
-		println "Tel: " + book.phone
-		println "Mail: " + book.mail
-
-
 		if(!book.validate()){
 			if(book.hasErrors()) {
 				book.errors.allErrors.each { println it }
 			}
-			
-			render(view:"/reservation-step2", model:[menu:"reservation", book:book])
-			
+
+			render(view:"/reservation-step2", model:[menu:MenuConstant.RESERVATION, book:book])
 		}else{
 			// TODO Save the book in the database
 			// TODO Send a email to confirm the book
@@ -134,6 +92,6 @@ class BookController {
 	}
 
 	def confirmBook = {
-		render(view:"/reservation-validate", model:[menu:"reservation"])
+		render(view:"/reservation-validate", model:[menu:MenuConstant.RESERVATION])
 	}
 }
