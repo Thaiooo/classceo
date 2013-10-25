@@ -37,78 +37,77 @@
 								<article id="content">
 									<h2>R&eacute;servation > Etape 1</h2>
 									
-									
 									<div class="book">
 									
-									<g:form name="bookForm" controller="book" method="post" action="bookStep2">
+										<g:form name="bookForm" controller="book" method="post" action="bookStep2">
+										
+											<h3>Informations</h3>
+											<p class="label">Date</p>
+											<p class="inputField">
+												<input type="text" id="bookDate" name="bookDate" size="10" value="<g:formatDate format="dd/MM/yyyy" date="${book.bookDate}"/>" />
+												<g:select name="bookHour" from="${0..23}" value="${book.bookHour}" noSelection="['':'HH']"/> :
+												<g:select name="bookMinute" from="${['0','15','30','45']}" value="${book.bookMinute}" noSelection="['':'MM']"/>
+											</p>
+											
+											<p class="label">Nb Personne</p>
+											<p class="inputField">
+												<g:select name="numberOfPersonne" from="${1..100}" value="${book.numberOfPersonne}"/>
+											</p>
+											
+											<p class="label">Commentaire</p>
+											<p class="inputField">
+												<g:textArea id="comment" name="comment" value="${book.comment}" rows="4" cols="40" class="no_barre"/>
+											</p>
+											
+											
+											<h3>D&eacute;part</h3>
+											<p class="label">Adresse</p>
+											<p class="inputField">
+												<g:textField name="adresseDepart" value="${book.adresseDepart}"/>
+											</p>
+											
+											<p class="label">Postal</p>
+											<p class="inputField">
+												<g:textField name="postaleDepart" value="${book.postaleDepart}"/>
+											</p>
+											
+											<p class="label">Ville</p>
+											<p class="inputField">
+												<g:textField name="villeDepart" value="${book.villeDepart}"/>
+											</p>
+											
+											<p class="label">Pays</p>
+											<p class="inputField">
+												<g:select name="paysDepart" from="${['Allemange','Belgique','Espagne','France','Luxembourg','Italie','Suisse']}" value="${book.paysDepart}"/>
+											</p>
+											
+											<h3>Destination</h3>
+											<p class="label">Adresse</p>
+											<p class="inputField">
+												<g:textField name="adresseDest" value="${book.adresseDest}"/>
+											</p>
+											
+											<p class="label">Postal</p>
+											<p class="inputField">
+												<g:textField name="postaleDest" value="${book.postaleDest}"/>
+											</p>
+											
+											<p class="label">Ville</p>
+											<p class="inputField">
+												<g:textField name="villeDest" value="${book.villeDest}"/>
+											</p>
+											
+											<p class="label">Pays</p>
+											<p class="inputField">
+												<g:select name="paysDest" from="${['Allemange','Belgique','Espagne','France','Luxembourg','Italie','Suisse']}" value="${book.paysDest}"/>
+											</p>
+											
+											<p class="submiField">
+												<a href="#" id="submitForm" class="button button-small button-icon button-icon-arrow">Suivant</a>
+											</p>
+										</g:form>
 									
-										<h3>Informations</h3>
-										<p class="label">Date</p>
-										<p class="inputField">
-											<input type="text" id="bookDate" name="bookDate" size="10"/>
-											<g:select name="bookHour" from="${0..23}" value="" noSelection="['':'HH']"/> :
-											<g:select name="bookMinute" from="${['0','15','30','45']}" value="" noSelection="['':'MM']"/>
-										</p>
-										
-										<p class="label">Nb Personne</p>
-										<p class="inputField">
-											<g:select name="numberOfPersonne" from="${1..100}" value="${book.numberOfPersonne}"/>
-										</p>
-										
-										<p class="label">Commentaire</p>
-										<p class="inputField">
-											<g:textArea id="comment" name="comment" value="${book.comment}" rows="4" cols="40" class="no_barre"/>
-										</p>
-										
-										
-										<h3>D&eacute;part</h3>
-										<p class="label">Adresse</p>
-										<p class="inputField">
-											<input type="text" id="adresseDepart" size="10"/>
-										</p>
-										
-										<p class="label">Postal</p>
-										<p class="inputField">
-											<input type="text" id="postaleDepart" size="10"/>
-										</p>
-										
-										<p class="label">Ville</p>
-										<p class="inputField">
-											<input type="text" id="villeDepart" size="10"/>
-										</p>
-										
-										<p class="label">Pays</p>
-										<p class="inputField">
-											<g:select name="paysDepart" from="${['Allemange','Belgique','Espagne','France','Luxembourg','Italie','Suisse']}" value="France"/>
-										</p>
-										
-										<h3>Destination</h3>
-										<p class="label">Adresse</p>
-										<p class="inputField">
-											<input type="text" id="adresseDest" size="10"/>
-										</p>
-										
-										<p class="label">Postal</p>
-										<p class="inputField">
-											<input type="text" id="postaleDest" size="10"/>
-										</p>
-										
-										<p class="label">Ville</p>
-										<p class="inputField">
-											<input type="text" id="villeDest" size="10"/>
-										</p>
-										
-										<p class="label">Pays</p>
-										<p class="inputField">
-											<g:select name="paysDest" from="${['Allemange','Belgique','Espagne','France','Luxembourg','Italie','Suisse']}" value="France"/>
-										</p>
-										
-										<p class="submiField">
-											<a href="#" id="submitForm" class="button button-small button-icon button-icon-arrow">Suivant</a>
-										</p>
-									</g:form>
-									
-									<div>
+									</div>
 									
 								</article>
 							</div>
