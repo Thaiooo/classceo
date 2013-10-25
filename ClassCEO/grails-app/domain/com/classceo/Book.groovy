@@ -33,20 +33,20 @@ class Book {
 		comment(nullable: true)
 		numberOfPersonne(nullable: false)
 
-		adresseDepart(nullable: false)
-		postaleDepart(nullable: false)
-		villeDepart(nullable: false)
-		paysDepart(nullable: false)
+		adresseDepart(nullable: false, blank: false)
+		postaleDepart(nullable: false, blank: false)
+		villeDepart(nullable: false, blank: false)
+		paysDepart(nullable: false, blank: false)
 
-		adresseDest(nullable: false)
-		postaleDest(nullable: false)
-		villeDest(nullable: false)
-		paysDest(nullable: false)
+		adresseDest(nullable: false, blank: false)
+		postaleDest(nullable: false, blank: false)
+		villeDest(nullable: false, blank: false)
+		paysDest(nullable: false, blank: false)
 
-		firstName(nullable: false)
-		lastName(nullable: false)
-		firm(nullable: false)
-		mail(nullable: false)
-		phone(nullable: false)
+		firstName(nullable: false, blank: false)
+		lastName(nullable: false, blank: false)
+		firm(nullable: false, blank: false)
+		mail(nullable: false, blank: false, email: true)
+		phone(nullable: false, blank: false)
 	}
 }
