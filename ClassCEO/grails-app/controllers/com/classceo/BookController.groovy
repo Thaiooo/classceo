@@ -19,7 +19,10 @@ class BookController {
 
 	def bookStep2 = {
 		def book = new Book()
+
 		book.properties = params
+		book.clearErrors()
+
 		if(StringUtils.isNotBlank(params.bookDate)){
 			book.bookDate = DateUtils.parseDate(params.bookDate)
 		}
@@ -43,17 +46,52 @@ class BookController {
 
 		session[SessionConstant.BOOK.name()] = book
 
-		render(view:"/reservation-step2", model:[menu:"reservation", book:book])
+
+		boolean validate;
+		if(!book.validate()){
+			if(book.hasErrors()) {
+
+				def currentErrors = book.errors.allErrors.findAll{ true }
+
+				def saveErrors = []
+				currentErrors.each {
+					if(it.getField() != "firstName" && it.getField() != "lastName" && it.getField() != "firm" && it.getField() != "phone" && it.getField() != "mail" ){
+						saveErrors.add(it)
+					}
+				}
+
+				book.clearErrors()
+				saveErrors.each {
+					book.errors.addError(it)
+				}
+
+				if(book.hasErrors()){
+					book.errors.allErrors.each { println it }
+
+					validate = false
+				}else{
+					validate = true
+				}
+			}
+		}
+
+		if(!validate){
+			render(view:"/reservation", model:[menu:"reservation", book:book])
+		}else{
+			render(view:"/reservation-step2", model:[menu:"reservation", book:book])
+		}
 	}
 
 	def validateBook = {
 		def book = session[SessionConstant.BOOK.name()]
-		
+
 		if(book == null){
 			redirect( action: "bookStep1")
 		}
-		
+
 		book.properties = params
+		book.clearErrors()
+
 
 		println "==========="
 		println "Date: " + book.bookDate
@@ -78,13 +116,21 @@ class BookController {
 		println "Tel: " + book.phone
 		println "Mail: " + book.mail
 
-		// TODO Save the book in the database
 
-		// TODO Send a email to confirm the book
+		if(!book.validate()){
+			if(book.hasErrors()) {
+				book.errors.allErrors.each { println it }
+			}
+			
+			render(view:"/reservation-step2", model:[menu:"reservation", book:book])
+			
+		}else{
+			// TODO Save the book in the database
+			// TODO Send a email to confirm the book
 
-		session[SessionConstant.BOOK.name()] = null
-
-		redirect( action: "confirmBook")
+			session[SessionConstant.BOOK.name()] = null
+			redirect( action: "confirmBook")
+		}
 	}
 
 	def confirmBook = {
