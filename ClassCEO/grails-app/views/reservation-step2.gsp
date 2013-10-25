@@ -35,44 +35,43 @@
 								<article id="content">
 									<h2>R&eacute;servation > Etape 2</h2>
 									
-									
 									<div class="book">
 									
-									<g:form name="bookForm" controller="book" action="validateBook" method="post" >
+										<g:form name="bookForm" controller="book" action="validateBook" method="post" >
+										
+											<h3>Contact</h3>
+											<p class="label">Nom</p>
+											<p class="inputField">
+												<input type="text" id="lastName" />
+											</p>
+											
+											<p class="label">Pr&eacute;nom</p>
+											<p class="inputField">
+												<input type="text" id="firstName" />
+											</p>
+											
+											<p class="label">Soci&eacute;te</p>
+											<p class="inputField">
+												<input type="text" id="firm" />
+											</p>
+											
+											<p class="label">Mail</p>
+											<p class="inputField">
+												<input type="text" id="mail" />
+											</p>
+											
+											<p class="label">T&eacute;l&eacute;phone</p>
+											<p class="inputField">
+												<input type="text" id="phone" />
+											</p>
+											
+											<p class="submiField">
+												<a href="#" id="submitForm" class="button button-small button-icon button-icon-arrow">Valider</a>
+												<a href="<g:createLink controller="book" action="backStep1" />" class="button button-small button-alt button-icon button-icon-arrow">Retour</a>
+											</p>
+										</g:form>
 									
-										<h3>Contact</h3>
-										<p class="label">Nom</p>
-										<p class="inputField">
-											<input type="text" id="lastName" />
-										</p>
-										
-										<p class="label">Prénom</p>
-										<p class="inputField">
-											<input type="text" id="firstName" />
-										</p>
-										
-										<p class="label">Sociéte</p>
-										<p class="inputField">
-											<input type="text" id="firm" />
-										</p>
-										
-										<p class="label">Mail</p>
-										<p class="inputField">
-											<input type="text" id="mail" />
-										</p>
-										
-										<p class="label">Téléphone</p>
-										<p class="inputField">
-											<input type="text" id="phone" />
-										</p>
-										
-										<p class="submiField">
-											<a href="#" id="submitForm" class="button button-small button-icon button-icon-arrow">Valider</a>
-											<a href="<g:createLink controller="book" action="backStep1" />" class="button button-small button-alt button-icon button-icon-arrow">Retour</a>
-										</p>
-									</g:form>
-									
-									<div>
+									</div>
 									
 								</article>
 							</div>
