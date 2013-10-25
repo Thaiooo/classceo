@@ -20,19 +20,33 @@ class Book {
 	String villeDest
 	String paysDest
 
+	String firstName
+	String lastName
+	String firm
+	String mail
+	String phone
+
 	static constraints = {
 		bookDate(nullable: false)
 		bookHour(nullable: false, max:23)
 		bookMinute(nullable: false, max:59)
 		comment(nullable: true)
 		numberOfPersonne(nullable: false)
+
 		adresseDepart(nullable: false)
-		adresseDest(nullable: false)
 		postaleDepart(nullable: false)
-		postaleDest(nullable: false)
 		villeDepart(nullable: false)
-		villeDest(nullable: false)
 		paysDepart(nullable: false)
+
+		adresseDest(nullable: false)
+		postaleDest(nullable: false)
+		villeDest(nullable: false)
 		paysDest(nullable: false)
+
+		firstName(nullable: false)
+		lastName(nullable: false)
+		firm(nullable: false)
+		mail(nullable: false)
+		phone(nullable: false)
 	}
 }
