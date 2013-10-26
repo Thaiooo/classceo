@@ -1,10 +1,12 @@
 package com.classceo
 
 import org.apache.commons.lang.StringUtils;
+import org.codehaus.groovy.grails.commons.ConfigurationHolder;
 
 class BookController {
 
 	def mailService
+	def config = ConfigurationHolder.config
 	
 	def bookStep1 = {
 		session[SessionConstant.BOOK.name()] = null
@@ -84,7 +86,8 @@ class BookController {
 
 			// TODO Send a email to confirm the book
 			mailService.sendMail {
-				to "quoc.thai.phan@gmail.com"
+				to book.mail
+				bcc config.classceo.contact.book.mail.cci
 				from "no-reply@classceo.fr"
 				subject "Votre réservation Class CEO"
 				body( view:"/mail/bookResume",
