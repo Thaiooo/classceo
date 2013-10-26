@@ -56,7 +56,7 @@ environments {
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
-		grails.config.locations = ["file:D:/workspaceTest/ClassCEO/config/mail-config.groovy"]
+		grails.config.locations = ["file:D:/Dev/workspace-sts/ClassCEO/config/mail-config.groovy"]
     }
     test {
         grails.serverURL = "http://localhost:8080/${appName}"
