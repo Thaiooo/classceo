@@ -1,37 +1,68 @@
 <%@ page contentType="text/html"%>
-
-${book.firstName}
-
-<%-- 
-<u><strong><g:message code="title.mail.reservation.notification" /></strong></u>
-
-<p>
-  	<strong><g:message code="label.travel.creation.date" /> : </strong> <g:formatDate format="yyyy-MM-dd HH:mm" date="${travel.creationDate}"/>
-</p>
-<p>    		
-	<strong><g:message code="label.mail.customer" /> : </strong> ${travel.customer.firstName} ${travel.customer.lastName}
-</p>
-<p>
-	<strong><g:message code="label.member.phone" /> : </strong>${travel.customer.phoneNumber}
-</p>
-
-<g:if test="${travel.customer.class.name != 'com.transceo.Customer'}">
-	<p>
-		<strong><g:message code="label.member.mail" /></strong> : ${travel.customer.eMail}
-	</p>
-</g:if>
-<p>
-	<strong><g:message code="label.travel.date" /> : </strong><g:formatDate format="yyyy-MM-dd HH:mm" date="${travel.travelDate}"/>
-</p>
-<p>
-	<strong><g:message code="label.travel.depart" /> : </strong>${travel.depart.adresse}, ${travel.depart.postal} ${travel.depart.city}, ${travel.depart.country} 
-</p>
-<g:if test="${travel.customer.class.name != 'com.transceo.Customer'}">
-	<p>
-		<strong><g:message code="label.travel.destination" /> : </strong>${travel.destination.adresse}, ${travel.destination.postal} ${travel.destination.city}, ${travel.destination.country}
-	</p>
-</g:if>
-<p>
-	<strong><g:message code="label.travel.comment" /> : </strong>${travel.comment}
-</p>
---%>
+<table>
+	<tbody>
+		<tr>
+			<td colspan="2"><strong>Confirmation de réservation</strong></td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2">Cher/Chère ${book.firstName} ${book.lastName},</td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2">Votre réservation est bien prise en compte.</td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Date de création:</td><td><g:formatDate format="yyyy-MM-dd HH:mm" date="${book.creationDate}"/></td>
+		</tr>
+		<tr>
+			<td>Mail:</td><td>${book.mail}</td>
+		</tr>
+		<tr>
+			<td>Téléphone:</td><td>${book.phone}</td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Date de réservation:</td><td><g:formatDate format="yyyy-MM-dd" date="${book.bookDate}"/> ${book.bookHour}:${book.bookMinute}</td>
+		</tr>
+		<tr>
+			<td>Nb Personne:</td><td>${book.numberOfPersonne}</td>
+		</tr>
+		<tr>
+			<td>Commentaire:</td><td>${book.comment}</td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top;">Départ:</td><td>${book.adresseDepart}<br>${book.postaleDepart} ${book.villeDepart}<br>${book.paysDepart}</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top;">Destination:</td><td>${book.adresseDest}<br>${book.postaleDest} ${book.villeDest}<br>${book.paysDest}</td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2">Cordialement,</td>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2">Service Réservation Class CEO</td>
+		</tr>
+		<tr>
+			<td colspan="2">http://www.classceo.fr</td>
+		</tr>
+	</tbody>
+</table>
