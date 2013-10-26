@@ -4,6 +4,8 @@ import org.apache.commons.lang.StringUtils;
 
 class BookController {
 
+	def mailService
+	
 	def bookStep1 = {
 		session[SessionConstant.BOOK.name()] = null
 		def book = new Book()
@@ -81,16 +83,14 @@ class BookController {
 
 
 			// TODO Send a email to confirm the book
-			/*
 			mailService.sendMail {
 				to "quoc.thai.phan@gmail.com"
 				from "no-reply@classceo.fr"
 				subject "Votre réservation Class CEO"
 				body( view:"/mail/bookResume",
 				plugin:"email-confirmation",
-				model:[bool:book])
+				model:[book:book])
 			}
-			*/
 
 			session[SessionConstant.BOOK.name()] = null
 			redirect( action: "confirmBook")
