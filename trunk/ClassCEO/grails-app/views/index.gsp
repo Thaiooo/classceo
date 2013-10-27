@@ -70,8 +70,8 @@
 							</div>
 							<div class="4u"> 
 								<section>
-									<a href="<g:createLink controller="page" action="reservation" />" class="image image-full"><img src="${resource(dir:'images',file:'pic13.jpg')}" alt=""></a>
-									<a href="<g:createLink controller="page" action="reservation" />" class="button button-huge button-alt2 button-icon button-icon-big-arrow">Service réservation<br />
+									<a href="<g:createLink controller="book" action="bookStep1" />" class="image image-full"><img src="${resource(dir:'images',file:'pic13.jpg')}" alt=""></a>
+									<a href="<g:createLink controller="book" action="bookStep1" />" class="button button-huge button-alt2 button-icon button-icon-big-arrow">Service réservation<br />
 									<span></span></a>
 								</section>
 							</div>
