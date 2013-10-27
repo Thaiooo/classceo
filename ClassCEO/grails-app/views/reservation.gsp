@@ -43,9 +43,16 @@
 											<h3>Informations</h3>
 											<p class="label">Date</p>
 											<p class="inputField">
-												<input type="text" id="bookDate" name="bookDate" size="10" value="<g:formatDate format="dd/MM/yyyy" date="${book.bookDate}"/>" 
+												<g:if test="${book.bookDate != null}">
+													<input type="text" id="bookDate" name="bookDate" size="10" value="<g:formatDate format="dd/MM/yyyy" date="${book.bookDate}"/>" 
 													class="${hasErrors(bean:book,field:'bookDate','errorField')}"
-												/>
+													/>
+												</g:if>
+												<g:else>
+													<input type="text" id="bookDate" name="bookDate" size="10" value="" 
+													class="${hasErrors(bean:book,field:'bookDate','errorField')}"
+													/>
+												</g:else>
 												<g:select name="bookHour" from="${0..23}" value="${book.bookHour}" noSelection="['':'HH']"
 													class="${hasErrors(bean:book,field:'bookHour','errorField')}"
 												/> :
