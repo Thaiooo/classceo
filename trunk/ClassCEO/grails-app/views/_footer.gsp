@@ -15,7 +15,7 @@
 									<section>
 										<h2>Nous Suivre</h2>
 										<div class="row">
-											<div class="4u"><a href="#" class="button button-big button-icon button-icon-follow button-icon-follow1">Facebook</a></div>
+											<div class="4u"><a href="https://www.facebook.com/classceo" class="button button-big button-icon button-icon-follow button-icon-follow1">Facebook</a></div>
 											<div class="4u"><a href="#" class="button button-big button-alt button-icon button-icon-follow button-icon-follow2">Google+</a></div>
 											<div class="4u"><a href="#" class="button button-big button-alt2 button-icon button-icon-follow button-icon-follow3">Twiter</a></div>
 										</div>
