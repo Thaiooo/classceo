@@ -3,6 +3,7 @@
     <head>
         <title><g:layoutTitle default="Grails" /></title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.jpg')}" type="image/x-icon" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700" rel="stylesheet" />
