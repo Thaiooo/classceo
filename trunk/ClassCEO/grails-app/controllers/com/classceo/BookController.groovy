@@ -85,9 +85,11 @@ class BookController {
 
 
 			// TODO Send a email to confirm the book
+			def mailsCCI = config.classceo.contact.book.mail.cci
+			def cci = StringUtils.split(mailsCCI, ",")
 			mailService.sendMail {
 				to book.mail
-				bcc config.classceo.contact.book.mail.cci
+				bcc cci
 				from "no-reply@classceo.fr"
 				subject "Votre réservation Class CEO"
 				body( view:"/mail/bookResume",
