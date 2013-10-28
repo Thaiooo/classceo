@@ -47,7 +47,7 @@ class Book {
 
 		firstName(nullable: false, blank: false)
 		lastName(nullable: false, blank: false)
-		firm(nullable: false, blank: false)
+		firm(nullable: true, blank: true)
 		mail(nullable: false, blank: false, email: true)
 		phone(nullable: false, blank: false)
 	}
