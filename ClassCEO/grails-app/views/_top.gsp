@@ -69,8 +69,11 @@
 										<h1>
 										<img src="${resource(dir:'images',file:'logo-small.png')}" alt="">
 										</h1>
-										<h1>											
-										<a href="#" class="mobileUI-site-name">R&eacute;server un Class CEO !<span> +33 7 60 06 28 08</span></a>
+										<h1>	
+										<a href="#" class="mobileUI-site-name">Class CEO le transport Platinium</a>
+										</h1>
+										<h1>
+										<span> +33 7 60 06 28 08</span>
 										</h1>
 								</header>
 						</div>
