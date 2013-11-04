@@ -30,14 +30,17 @@
 									<h2>Le parc automobile</h2>
 									<h3>Nos véhicules</h3>
 									<a href="#" class="image image-left"><img src="${resource(dir:'images',file:'pic03.jpg')}" alt=""></a>
-									<p>Nous possedons une flotte de vehicules ressents révisés et controlés régulierement.</p>
-									<p>Nous possédons une assurance professionnel ainsi qu'une responsabilité civile.</p>
-									<p>Notre flotte est composée de voitures de prestuge( Mercedes Classe E), de minivans de luxe(Mercedes Viano , Volkswagen Caravelle).<br><br></p>
+									<p>Notre flotte de véhicules est récente, révisée et contrôlée régulierement.</p>
+									<p>Notre parc est composé de voitures de prestige (Mercedes Classe E), de minivans de luxe (Mercedes Viano , Volkswagen Caravelle)</p>
+									<p>Nous pouvons équiper nos véhicules en WIFI à bord, I pad, imprimante, journaux...</p>
+									<p>Nous possédons une assurance professionnelle tous risques ainsi qu'une responsabilité civile qui couvre votre déplacement.</p>
 								</article>
+								
 								<article id="content">
 									<h3>Nos chauffeurs</h3>
-									<a href="#" class="image image-left"><img src="${resource(dir:'images',file:'pic09.jpg')}" alt=""></a>
-									<p>Notre société est enregistrée auprés d'Atout France ce qui implique que nos chauffaurs sont titulaires d'un diplome de premiers secours.</p>   
+									<a href="#" class="image image-left"><img src="${resource(dir:'images',file:'logo_atout_france.png')}" alt=""></a>
+									<p>Class CEO est enregistrée auprés des services d'Atout France ce qui implique, en autre, que nos chauffaurs sont titulaires d'un diplome de premiers secours.</p>
+									<p>De même, nos chauffeurs doivent respecter notre charte de qualité, tant au niveau de la tenue vestimentaire, de l'accueil, que de la propreté du véhicule.</p>   
 								</article>
 							</div>
 							

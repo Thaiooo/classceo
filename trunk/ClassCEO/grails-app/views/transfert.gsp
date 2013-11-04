@@ -29,7 +29,7 @@
 									<p class="subtitle">Les transferts aux aéroports, gares, hôtels, domiciles</p>
 									<a href="#" class="image image-left"><img src="${resource(dir:'images',file:'pic06.jpg')}" alt=""></a>
 									<p>Pour ce type de service chaque vol ou train est vérifié en temps réel par nos équipes, ainsi vous aurez la certitude d'avoir votre chauffeur à votre arrivée. Il vous accueillera avec une pancarte personnalisée à votre nom et prendra  également en charge vos bagages afin de vous faire arriver détendu à votre destination.</p>
-									<p>A titre indicatif notre tarif pour venir des aéroports de Roissy et Orly à destination de Paris est à partir de 75 Euros en Mercedes classe E.</p>
+									<p>A titre indicatif notre tarif pour venir des aéroports de Roissy ou Orly à destination de Paris est à partir de 75 euros en Mercedes classe E.</p>
 								</article>
 							</div>
 							
