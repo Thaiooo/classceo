@@ -81,12 +81,12 @@ class BookController {
 		if(!book.validate()){
 			render(view:"/reservation-step2", model:[menu:MenuConstant.RESERVATION, book:book])
 		}else{
-			// TODO Save the book in the database
+			// Save the book in the database
+			book.save()
 
-
-			// TODO Send a email to confirm the book
+			// Send a email to confirm the book
 			def mailsCCI = config.classceo.contact.book.mail.cci
-			def cci = StringUtils.split(mailsCCI, ",")
+			def cci = StringUtils.split(mailsCCI.toString(), ",")
 			mailService.sendMail {
 				to book.mail
 				bcc cci
