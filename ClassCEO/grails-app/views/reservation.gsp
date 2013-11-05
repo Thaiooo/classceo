@@ -41,6 +41,12 @@
 										<g:form name="bookForm" controller="book" method="post" action="bookStep2">
 										
 											<h3>Informations</h3>
+											<p class="label">Type</p>
+											<p class="inputField">
+												<g:select name="bookType" from="${['Réservation','Devis']}" value="${book.bookType}"
+													class="${hasErrors(bean:book,field:'bookType','errorField')}"
+												/>
+											</p>
 											<p class="label">Date</p>
 											<p class="inputField">
 												<g:if test="${book.bookDate != null}">
