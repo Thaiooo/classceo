@@ -70,7 +70,7 @@
 										<img src="${resource(dir:'images',file:'logo-small.png')}" alt="">
 										</h1>
 										<h1>	
-										<a href="#" class="mobileUI-site-name">Class CEO le transport Platinium</a>
+										<a href="#" class="mobileUI-site-name">Class CEO<br>Le transport Platinium</a>
 										</h1>
 										<h1>
 										<span> +33 7 60 06 28 08</span>

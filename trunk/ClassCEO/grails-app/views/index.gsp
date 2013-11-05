@@ -15,28 +15,34 @@
 										<div class="viewer">
 											<div class="reel">
 												<div class="slide">
+													<%--
 													<div class="info">
 														<h2>Notre philosophie</h2>
 														<span>faire de vos déplacements des moments de sérénité</span>
 														<a class="link" href="#">Full story ...</a>
 													</div>
+													--%>
 													<img src="${resource(dir:'images',file:'slide01.jpg')}" alt="" />
 												</div>
 												<div class="slide">
+													<%--
 													<div class="info">
 														<h2>Nos clients<br />et partenaires</h2>
 														<span>Nous satisfaisons une large clientèle d'hôtels, d'entreprises nationales et internationales, d'agences de voyages ainsi que de nombreux particuliers</span>
 														<a class="link" href="#">Full story ...</a>
-													</div>	
-													<img src="${resource(dir:'images',file:'slide03.jpg')}" alt="" />
+													</div>
+													--%>
+													<img src="${resource(dir:'images',file:'slide02.jpg')}" alt="" />
 												</div>
 												<div class="slide">
+													<%--
 													<div class="info">
 														<h2>Etiam dolore veroeros<br />lorem dolore nulla</h2>
 														<span>Nulla volutpat dolor sed amet</span>
 														<a class="link" href="#">Full story ...</a>
 													</div>	
-													<img src="${resource(dir:'images',file:'slide02.jpg')}" alt="" />
+													--%>
+													<img src="${resource(dir:'images',file:'slide03.jpg')}" alt="" />
 												</div>
 											</div>
 										</div>

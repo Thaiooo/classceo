@@ -28,15 +28,15 @@
 									<h2>Prestations</h2>
 									<a href="#" class="image image-left"><img src="${resource(dir:'images',file:'pic02.jpg')}" alt=""></a>
 									
-									<p>Class CEO fort de son expérience dans les services vous accompagnera en toute circonstance et sera à votre écoute pour rendre vos déplacements agréables.</p>
-									<p>Nous vous divulguons ici quelques uns des secrets de notre réussite.<br>
-									- un accueil chaleureux et souriant.<br>
-									- une ponctualité naturelle.<br>
-									- une bonne observation et une anticipation de vos désirs.<br>
-									 -une conduite souple dans le respect du code de la route.<br>
-									- des chauffeurs bilingues et discrets.<br>
-									- Class CEO est enregistrée auprés des services d'Atout France ce qui implique en autre que nos chauffaurs sont titulaires d'un diplôme de premiers secours.</p>   
-									<p>Nous vous proposons trois façons différentes de découvrir le plaisir de vous déplacer en Class CEO</p>
+									<p>Class CEO, fort de son expérience dans les services, vous accompagnera en toute circonstance et sera à votre écoute pour rendre vos déplacements agréables.</p>
+									<p>Nous vous divulguons ici quelques uns des secrets de notre réussite:<br>
+									- un accueil chaleureux et souriant<br>
+									- une ponctualité naturelle<br>
+									- une bonne observation et une anticipation de vos désirs<br>
+									- une conduite souple dans le respect du code de la route<br>
+									- des chauffeurs bilingues et discrets<br>
+									- Class CEO est enregistrée auprès des services d'Atout France ce qui implique en autre que nos chauffeurs sont titulaires d'un diplôme de premiers secours.</p>   
+									<p>Nous vous proposons trois façons différentes de découvrir le plaisir de vous déplacer en Class CEO.</p>
 									<ul>
 										<li>
 											<p><a href="<g:createLink controller="page" action="transfert" />">Transferts.</a></p>
