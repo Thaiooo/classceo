@@ -541,7 +541,7 @@
 		margin: 0px;
 		padding: 0px;
 	}
-		.inputField #bookDate, #bookHour, #bookMinute, #numberOfPersonne
+		.inputField #bookDate, #bookHour, #bookMinute, #numberOfPersonne, #bookType
 		{
 			border: 1px solid #999;
 		}
