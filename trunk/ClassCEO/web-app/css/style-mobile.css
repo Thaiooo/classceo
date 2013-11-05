@@ -225,7 +225,8 @@
 			display: block;
 			font-size: 0.65em;
 			font-weight: 200;
-			color: #727272;
+			/*color: #727272;*/
+			color: #D93D00;
 			letter-spacing: 0;
 		}
 
