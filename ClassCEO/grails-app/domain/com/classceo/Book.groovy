@@ -5,6 +5,7 @@ import java.util.Date
 class Book {
 
 	Date creationDate
+	String bookType
 	Date bookDate
 	Integer bookHour
 	Integer bookMinute
@@ -29,6 +30,7 @@ class Book {
 
 	static constraints = {
 		creationDate(nullable: false)
+		bookType(nullable: false)
 		bookDate(nullable: false)
 		bookHour(nullable: false, max:23)
 		bookMinute(nullable: false, max:59)
