@@ -66,7 +66,7 @@
 												<g:select name="numberOfPersonne" from="${1..100}" value="${book.numberOfPersonne}"/>
 											</p>
 											
-											<p class="label">Commentaire</p>
+											<p class="label">Commentaire (N° de vol, N° train, N° de chambre, etc...)</p>
 											<p class="inputField">
 												<g:textArea id="comment" name="comment" value="${book.comment}" rows="4" cols="40" class="no_barre"/>
 											</p>

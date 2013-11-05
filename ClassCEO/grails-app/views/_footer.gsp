@@ -17,7 +17,7 @@
 										<div class="row">
 											<div class="4u"><a href="https://www.facebook.com/classceo" class="button button-big button-icon button-icon-follow button-icon-follow1">Facebook</a></div>
 											<div class="4u"><a href="#" class="button button-big button-alt button-icon button-icon-follow button-icon-follow2">Google+</a></div>
-											<div class="4u"><a href="#" class="button button-big button-alt2 button-icon button-icon-follow button-icon-follow3">Twiter</a></div>
+											<div class="4u"><a href="#" class="button button-big button-alt2 button-icon button-icon-follow button-icon-follow3">Linkedin</a></div>
 										</div>
 									</section>
 									<section>
@@ -34,7 +34,6 @@
 											</div>
 											<div class="6u">
 												<ul class="style3">
-													<li class="first"><a href="#" class="contact-icon contact-icon-comment">@untitledcorporation</a></li>
 													<li class="link"><a href="#" class="contact-icon contact-icon-telephone">+33 7 60 06 28 08</a></li>
 												</ul>
 											</div>
@@ -48,7 +47,7 @@
 						<!-- Copyright -->
 							<div class="row">
 								<div id="copyright" class="12u">
-									&copy; Untitled Corporation. All rights reserved. Lorem ipsum dolor sit amet nullam feugiat consequat adipiscing lorem.
+									&copy; Class CEO. All rights reserved.
 								</div>
 							</div>
 						<!-- Copyright Ends Here -->

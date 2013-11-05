@@ -27,9 +27,9 @@
 								<article id="content">
 									<h2>La mise à disposition</h2>
 									<a href="#" class="image image-left"><img src="${resource(dir:'images',file:'pic10.jpg')}" alt=""></a>
-									<p>Vous venez en vacances à Paris pour visiter ses monuments ou aller dans un parc d'attractions en famille. Class CEO vous prendra en charge et vous transportera en toute sécurité.</p>
-									<p>Vous organisez un road show à Paris, un évènement avec des clients. Class CEO vous apportera une qualité de prestation  optimale qui valorisera vos invités.</p>
-									<p>A titre d'exemple, nous pouvons équiper nos véhicules en WIFI à bord, I pad, imprimante, journaux...</p>
+									<p>Vous venez en vacances à Paris pour visiter ses monuments ou aller dans un parc d'attractions en famille, Class CEO vous prendra en charge et vous transportera en toute sécurité.</p>
+									<p>Vous organisez un road show à Paris, un évènement avec des clients, Class CEO vous apportera une qualité de prestation  optimale qui valorisera vos invités.</p>
+									<p>A titre d'exemple, nous pouvons équiper nos véhicules en WIFI à bord, iPad, imprimante, journaux...</p>
 									<p>Pour tout devis spécial nous consulter.</p>
 								</article>
 							</div>
