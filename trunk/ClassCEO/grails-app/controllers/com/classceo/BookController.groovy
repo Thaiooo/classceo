@@ -82,7 +82,11 @@ class BookController {
 			render(view:"/reservation-step2", model:[menu:MenuConstant.RESERVATION, book:book])
 		}else{
 			// Save the book in the database
-			book.save()
+			try{
+				book.save()
+			}catch (Throwable e) {
+				println e
+			}
 
 			// Send a email to confirm the book
 			def mailsCCI = config.classceo.contact.book.mail.cci
