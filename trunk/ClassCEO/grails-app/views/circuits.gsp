@@ -8,7 +8,7 @@
 			<div id="main-wrapper">
 
 				<!-- Main Content -->
-					<div id="main" class="5grid-layout">
+					<div id="main" class="container">
 
 						<div class="row">
 						
@@ -23,7 +23,7 @@
 								</section>
 							</div>
 
-							<div class="8u mobileUI-main-content">
+							<div class="8u skel-cell-mainContent">
 								<article id="content">
 									<h2>Les circuits touristique</h2>
 									<p class="subtitle">Class CEO vous propose de découvrir la France...</p>
