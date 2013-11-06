@@ -1,5 +1,5 @@
 /*
-	Slidertron 1.2: A flexible slider plugin for jQuery
+	Slidertron 1.3: A flexible slider plugin for jQuery
 	By n33 | http://n33.co | @n33co
 	Dual licensed under the MIT or GPLv2 license.
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -65,7 +65,7 @@
 
 				// General settings
 
-					mode:							'slide',	// Slider mode ('slide', 'fade')
+					mode:							'slide',	// Slider mode ('slide', 'fade', 'fadeIn')
 					speed:							'fast',		// Transition speed (0 for instant, 'slow', 'fast', or a custom duration in ms)
 					fadeInSpeed:					'slow',		// Speed at which to fade in the reel on page load (0 for instant, 'slow', 'fast', or a custom duration in ms)
 					navWrap:						true,		// Wrap navigation when we navigate past the first or last slide
@@ -88,6 +88,7 @@
 					activeJumpLinkClass:			'active',	// Class applied to the active jump link
 					arrowsToNav:					false,		// If true, the left/right arrow keys will be used for navigation
 					blurOnChange:					false,		// If true, defocuses any input elements on slide change
+					navSize:						1,			// ...
 
 				// Callbacks
 				
@@ -286,20 +287,40 @@
 
 			function nextSlide()
 			{
+				var x = false;
+				
 				if ((isSeamless && currentIndex <= pLast)
 				||	(!isSeamless && currentIndex < pLast))
-					switchSlide(parseInt(currentIndex) + 1);
+					x = parseInt(currentIndex) + settings.navSize;
 				else if (settings.navWrap || isAdvancing)
-					switchSlide(pFirst);
+					x = pFirst;
+				
+				if (x > pLast)
+					x = pLast;
+				else if (x < 0)
+					x = 0;
+				
+				if (x !== false)
+					switchSlide(x);
 			}
 			
 			function previousSlide()
 			{
+				var x = false;
+
 				if ((isSeamless && currentIndex >= pFirst)
 				||	(!isSeamless && currentIndex > pFirst))
-					switchSlide(parseInt(currentIndex) - 1);
+					x = parseInt(currentIndex) - settings.navSize;
 				else if (settings.navWrap)
-					switchSlide(pLast);
+					x = pLast;
+					
+				if (x > pLast)
+					x = pLast;
+				else if (x < 0)
+					x = 0;
+				
+				if (x !== false)
+					switchSlide(x);
 			}
 
 			function updateJumpLink(index)
@@ -463,6 +484,53 @@
 					// Transition
 						switch (settings.mode)
 						{
+							case 'fadeIn':
+								// Clone active slide
+									x = list[currentIndex].object.clone();
+									x
+										.appendTo(__viewer)
+										.css('left', 0)
+										.css('top', 0);
+								
+								// Switch slide
+									currentIndex = index;
+									__reel.css('left', -1 * list[currentIndex].x);
+
+								// Get real index and adjust reel position
+									if (list[currentIndex].realIndex !== false)
+									{
+										currentIndex = list[currentIndex].realIndex;
+										__reel.css('left', -1 * list[currentIndex].x);
+									}
+
+								// Active slide
+									if (settings.activeSlideClass)
+										list[currentIndex].object
+											.addClass(settings.activeSlideClass);
+
+								// Link
+									if (settings.clickToNav && !list[currentIndex].link)
+										list[currentIndex].object
+											.css('cursor', 'default');
+
+								// Nav controls
+									updateNavControls();
+
+								// Update URL
+									updateURL();
+
+								// Callback
+									if (settings.onSlideSwitch)
+										(settings.onSlideSwitch(list[currentIndex].object));
+								
+								// Fade out and remove itcloned slide
+									x.fadeOut(settings.speed, function() {
+										isLocked = false;
+										x.remove();
+									});
+								
+								break;
+
 							case 'fade':
 								__reel.fadeTo(settings.speed, 0.001, function() {
 									currentIndex = index;
@@ -999,19 +1067,22 @@
 						.bind('slidertron_reFit', function() {
 							var cx = 0;
 
-							if (isAdvancing)
-								interruptAdvance();
+							//if (isAdvancing)
+								//interruptAdvance();
 
 							window.setTimeout(function() {
+								var h = Math.floor(__viewer.width() / settings.autoFitAspectRatio);
+								
 								for (x in list)
 								{
 									list[x].object.width(__viewer.width());
+									list[x].object.height(h);
 									list[x].x = cx - settings.viewerOffset;
 									list[x].object.css('left', cx);
 									cx += list[x].object.width();
 								}
 								__reel.css('left', -1 * list[currentIndex].x);
-								__viewer.height(Math.floor(__viewer.width() / settings.autoFitAspectRatio));
+								__viewer.height(h);
 							}, 100);
 						})
 						.bind('slidertron_stopAdvance', function() {

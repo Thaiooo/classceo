@@ -1,29 +1,4 @@
-/*
-	Dropotron 1.2: Makes uber-customizable multilevel drop down menus.
-	By n33 | http://n33.co | @n33co
-	Dual licensed under the MIT or GPLv2 license.
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	MIT LICENSE:
-	Copyright (c) 2012 n33, http://n33.co
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
-	files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use,
-	copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
-	Software is furnished to do so, subject to the following conditions:
-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-	OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-	HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-	FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	GPLv2 LICENSE:
-	Copyright (c) 2012 n33, http://n33.co
-	This program is free software: you can redistribute it and/or modify it	under the terms of the GNU General Public License as
-	published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version. This program is
-	distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
-	or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of
-	the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. 
-	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
+/* dropotron v1.3.2 | (c) n33 | n33.co @n33co | MIT + GPLv2 */
 
 (function(jQuery) {
 
@@ -58,14 +33,17 @@
 				globalOffsetY:			0,					// Global offset Y
 				IEOffsetX:				0,					// IE Offset X
 				IEOffsetY:				0,					// IE Offset Y
-				noOpenerFade:			false				// If true, when in "fade" mode the top-level opener will not fade with the menu
+				noOpenerFade:			false,				// If true, when in "fade" mode the top-level opener will not fade with the menu
+				detach:					true,				// Detach second level menus (to prevent parent styling from bleeding through)
+				cloneOnDetach:			true				// If true, when detaching second level menus, leave a copy behind
 			}, options);
 
 		// Variables
 			var _top = settings.selectorParent, _menus = _top.find('ul');
 			var _window = jQuery('html');
 			var isLocked = false, hoverTimeoutId = null, hideTimeoutId = null;
-			var _isTouch = !!('ontouchstart' in window), _eventType = (_isTouch ? 'touchend' : 'click');
+			var _isTouch = !!('ontouchstart' in window), _eventType = 'click';
+			var _menus_length = _menus.length;
 
 		// Main
 			_top
@@ -107,41 +85,66 @@
 								t.trigger('doCollapse');
 						});
 						
-						var left, top, isTL = (menu.css('z-index') == settings.baseZIndex), oo = opener.offset(), op = opener.position(), opp = opener.parent().position(), ow = opener.outerWidth(), mw = menu.outerWidth();
-						
+						var x, c, left, top, isTL = (menu.css('z-index') == settings.baseZIndex), oo = opener.offset(), op = opener.position(), opp = opener.parent().position(), ow = opener.outerWidth(), mw = menu.outerWidth();
+
 						if (isTL)
 						{
-							top = oo.top + opener.outerHeight() + settings.globalOffsetY;
+							if (!settings.detach)
+								x = op;
+							else
+								x = oo;
+						
+							top = x.top + opener.outerHeight() + settings.globalOffsetY;
+							c = settings.alignment;
+							
+							menu
+								.removeClass('left')
+								.removeClass('right')
+								.removeClass('center');
 
 							switch (settings.alignment)
 							{
 								case 'right':
-									left = oo.left - mw + ow;
+									left = x.left - mw + ow;
 									
 									if (left < 0)
-										left = oo.left;
+									{
+										left = x.left;
+										c = 'left';
+									}
 										
 									break;
 									
 								case 'center':
-									left = oo.left - Math.floor((mw - ow) / 2);
+									left = x.left - Math.floor((mw - ow) / 2);
 
 									if (left < 0)
-										left = oo.left;
+									{
+										left = x.left;
+										c = 'left';
+									}
 									else if (left + mw > _window.width())
-										left = oo.left - mw + ow;
+									{
+										left = x.left - mw + ow;
+										c = 'right';
+									}
 										
 									break;
 
 								case 'left':
 								default:
-									left = oo.left;
+									left = x.left;
 									
 									if (left + mw > _window.width())
-										left = oo.left - mw + ow;
+									{
+										left = x.left - mw + ow;
+										c = 'right';
+									}
 
 									break;
 							}
+							
+							menu.addClass(c);
 						}
 						else
 						{
@@ -174,7 +177,7 @@
 							}
 						}
 
-						if (jQuery.browser.msie && jQuery.browser.version < 8)
+						if (navigator.userAgent.match(/MSIE ([0-9]+)\./) && RegExp.$1 < 8)
 						{
 							left += settings.IEOffsetX;
 							top += settings.IEOffsetY;
@@ -380,13 +383,26 @@
 
 			_top.children('li').each(function() {
 
-				var opener = jQuery(this), menu = opener.children('ul');
+				var opener = jQuery(this), menu = opener.children('ul'), c;
 
 				if (menu.length > 0)
 				{
-					menu
-						.detach()
-						.appendTo('body');
+					if (settings.detach)
+					{
+						if (settings.cloneOnDetach)
+						{
+							c = menu.clone();
+							
+							c
+								.attr('class', '')
+								.hide()
+								.appendTo(menu.parent());
+						}
+					
+						menu
+							.detach()
+							.appendTo('body');
+					}
 
 					for(var z = settings.baseZIndex, i = 1, y = menu; y.length > 0; i++)
 					{
