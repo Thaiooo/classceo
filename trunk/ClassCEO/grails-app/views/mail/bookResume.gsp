@@ -73,7 +73,16 @@
 			<td colspan="2">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="2">Service Réservation Class CEO</td>
+			<td colspan="2">Service Réservation</td>
+		</tr>
+		<tr>
+			<td colspan="2">Class CEO</td>
+		</tr>
+		<tr>
+			<td colspan="2">+33 7 60 06 28 08</td>
+		</tr>
+		<tr>
+			<td colspan="2">info@classceo.fr</td>
 		</tr>
 		<tr>
 			<td colspan="2">http://www.classceo.fr</td>
