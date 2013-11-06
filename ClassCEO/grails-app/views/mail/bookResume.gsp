@@ -2,7 +2,14 @@
 <table>
 	<tbody>
 		<tr>
-			<td colspan="2"><strong>Confirmation de ${book.bookType}</strong></td>
+			<td colspan="2"><strong>Confirmation de 
+			<g:if test="${book.bookType == 'devis'}">
+			devis
+			</g:if>
+			<g:else>
+			réservation
+			</g:else>
+			</strong></td>
 		</tr>
 		<tr>
 			<td colspan="2">&nbsp;</td>
@@ -14,7 +21,14 @@
 			<td colspan="2">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="2">Votre ${book.bookType} est bien prise en compte.</td>
+			<td colspan="2">Votre 
+			<g:if test="${book.bookType == 'devis'}">
+			devis est bien pris 
+			</g:if>
+			<g:else>
+			réservation est bien prise 
+			</g:else>
+			 en compte.</td>
 		</tr>
 		<tr>
 			<td colspan="2">&nbsp;</td>
