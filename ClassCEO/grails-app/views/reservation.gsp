@@ -43,7 +43,7 @@
 											<h3>Informations</h3>
 											<p class="label">Type (Réservation / Devis)</p>
 											<p class="inputField">
-												<g:select name="bookType" from="${['Réservation','Devis']}" value="${book.bookType}"
+												<g:select name="bookType" from="${['reservation','devis']}" value="${book.bookType}"
 													class="${hasErrors(bean:book,field:'bookType','errorField')}"
 												/>
 											</p>
