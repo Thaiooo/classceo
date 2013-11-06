@@ -91,11 +91,17 @@ class BookController {
 			// Send a email to confirm the book
 			def mailsCCI = config.classceo.contact.book.mail.cci
 			def cci = StringUtils.split(mailsCCI.toString(), ",")
+			
+			def subjectText = "Votre réservation Class CEO"
+			if(book.bookType == "devis"){
+				subjectText = "Votre devis Class CEO"
+			}
+			
 			mailService.sendMail {
 				to book.mail
 				bcc cci
 				from "no-reply@classceo.fr"
-				subject "Votre réservation Class CEO"
+				subject subjectText
 				body( view:"/mail/bookResume",
 				plugin:"email-confirmation",
 				model:[book:book])
