@@ -8,7 +8,7 @@
 			<div id="main-wrapper">
 
 				<!-- Main Content -->
-					<div id="main" class="5grid-layout">
+					<div id="main" class="container">
 
 						<div class="row">
 
@@ -25,7 +25,7 @@
 							
 							</div>
 
-							<div class="8u mobileUI-main-content">
+							<div class="8u skel-cell-mainContent">
 								<article id="content">
 									<h2>Le parc automobile</h2>
 									<h3>Nos véhicules</h3>
