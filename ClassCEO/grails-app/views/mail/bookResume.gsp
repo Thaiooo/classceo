@@ -2,7 +2,7 @@
 <table>
 	<tbody>
 		<tr>
-			<td colspan="2"><strong>Confirmation de réservation</strong></td>
+			<td colspan="2"><strong>Confirmation de ${book.bookType}</strong></td>
 		</tr>
 		<tr>
 			<td colspan="2">&nbsp;</td>
@@ -14,7 +14,7 @@
 			<td colspan="2">&nbsp;</td>
 		</tr>
 		<tr>
-			<td colspan="2">Votre réservation est bien prise en compte.</td>
+			<td colspan="2">Votre ${book.bookType} est bien prise en compte.</td>
 		</tr>
 		<tr>
 			<td colspan="2">&nbsp;</td>
