@@ -1,15 +1,13 @@
-		<!-- Footer Wrapper -->
 			<div id="footer-wrapper">
 			
 				<!-- Footer -->
-					<footer id="footer" class="container">
+					<footer id="footer" class="5grid-layout">
 					
 						<!-- Footer Content -->
 							<div class="row">
 								
 								<div class="3u">
 									<section>
-										<h2>&nbsp;</h2>
 									</section>
 								</div>
 
@@ -58,4 +56,3 @@
 				<!-- Footer Ends Here -->
 
 			</div>
-		<!-- Footer Wrapper Ends Here -->

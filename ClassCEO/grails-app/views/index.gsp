@@ -4,12 +4,9 @@
         <meta name="layout" content="main" />
     </head>
     <body>
-    
-		<!-- Banner Wrapper -->
-			<div id="banner-wrapper">
-
+    		<div id="banner-wrapper">
 				<!-- Banner -->
-					<div id="banner" class="container">
+					<div id="banner" class="5grid-layout">
 						<div class="row">
 							<div class="12u">
 	
@@ -43,7 +40,7 @@
 														<h2>Etiam dolore veroeros<br />lorem dolore nulla</h2>
 														<span>Nulla volutpat dolor sed amet</span>
 														<a class="link" href="#">Full story ...</a>
-													</div>
+													</div>	
 													--%>
 													<img src="${resource(dir:'images',file:'slide03.jpg')}" alt="" />
 												</div>
@@ -90,6 +87,5 @@
 				<!-- Banner Ends Here -->
 
 			</div>
-		<!-- Banner Wrapper Ends Here -->
     </body>
 </html>

@@ -18,7 +18,7 @@
 			<div id="main-wrapper">
 
 				<!-- Main Content -->
-					<div id="main" class="container">
+					<div id="main" class="5grid-layout">
 
 						<div class="row">
 
@@ -33,7 +33,7 @@
 								</section>
 							</div>
 
-							<div class="8u skel-cell-mainContent">
+							<div class="8u mobileUI-main-content">
 								<article id="content">
 									<h2>R&eacute;servation > Etape 1</h2>
 									

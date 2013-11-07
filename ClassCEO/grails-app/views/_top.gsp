@@ -1,6 +1,6 @@
 			<div id="header-wrapper">
 
-				<div class="container">
+				<div class="5grid-layout">
 					<div class="row">
 						<div class="12u">
 							<!-- Nav -->

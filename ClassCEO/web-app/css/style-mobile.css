@@ -97,52 +97,63 @@
 /* Mobile UI                                                                     */
 /*********************************************************************************/
 
-	#titleBar .toggle
+	#mobileUI-site-titlebar
+	{
+	}
+
+	#mobileUI-site-title
+	{
+		display: none;
+	}
+
+	#mobileUI-site-nav-opener
 	{
 		text-indent: -9999em;
 		width: 70px;
 		height: 50px;
-		position: absolute;
-		left: 0;
-		top: 0;
+		opacity: 1;
 	}
 
-		#titleBar .toggle:before
+		#mobileUI-site-nav-opener:before
 		{
 			content: '';
 			position: absolute;
 			left: 10px;
-			top: 10px;
+			top: 16px;
 			background: rgba(128,128,128,0.75);
 			width: 60px;
 			height: 36px;
 			opacity: 0.5;
 		}
 
-		#titleBar .toggle:after
+		#mobileUI-site-nav-opener:after
 		{
 			content: '';
 			position: absolute;
 			left: 27px;
-			top: 22px;
+			top: 28px;
 			width: 44px;
 			height: 44px;
 			background: url('images/mobileUI-site-nav-opener-bg.svg') 0 0 no-repeat;
 			opacity: 0.6;
 		}
 
-		#titleBar .toggle:active:before
+		#mobileUI-site-nav-opener:active:before
 		{
 			opacity: 1.0;
 		}
 
-	#navPanel
+	#mobileUI-site-nav
 	{
 		background: #e8e8e8 url('images/bg01.jpg') repeat;
 		box-shadow: inset -3px 0px 5px 0px #000;
 	}
 
-	#navPanel .link
+	#mobileUI-site-nav-inner
+	{
+	}
+
+	.mobileUI-site-nav-link
 	{
 		display: block;
 		color: #888;
@@ -153,12 +164,12 @@
 		padding: 0 1em 0 1em;
 	}
 	
-	#navPanel .link:first-child
+	.mobileUI-site-nav-link:first-child
 	{
 		border-top: 0;
 	}
 	
-	#navPanel .link.depth-0
+	.mobileUI-site-nav-link-depth-0
 	{
 		color: #fff;
 	}
@@ -169,7 +180,7 @@
 
 	#header-wrapper
 	{
-		padding: 3em 0 3em 0;
+		padding: 6em 0 3em 0;
 	}
 	
 	#banner-wrapper
@@ -263,7 +274,6 @@
 				#slider .viewer .reel .slide
 				{
 					position: relative;
-					height: auto;
 				}
 		
 				#slider .viewer .reel .slide img
