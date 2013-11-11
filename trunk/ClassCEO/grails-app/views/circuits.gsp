@@ -2,7 +2,8 @@
     <head>
         <title>Class CEO</title>
         <meta name="layout" content="main" />
-    </head>
+		<g:render template="/initscript"/>
+	</head>
     <body>
     	<!-- Main Wrapper -->
 			<div id="main-wrapper">

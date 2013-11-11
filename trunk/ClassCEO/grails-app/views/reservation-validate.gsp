@@ -2,6 +2,7 @@
     <head>
         <title>Class CEO</title>
         <meta name="layout" content="main" />
+        <g:render template="/initscript"/>
         <script>
         $(function() {
         	$( "#submitForm" ).click(function() {
