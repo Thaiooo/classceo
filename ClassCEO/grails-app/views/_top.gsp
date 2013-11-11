@@ -12,7 +12,7 @@
 										<g:else>
 											<li>
 										</g:else>
-										<a href="<g:createLink controller="page" action="home" />"/>Accueil</a>
+										<a href="<g:createLink uri ='/' />"/>Accueil</a>
 										</li>
 
 										<g:if test="${menu == com.classceo.MenuConstant.SOCIETE}">
