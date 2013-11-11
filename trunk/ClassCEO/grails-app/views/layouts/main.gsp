@@ -21,10 +21,12 @@
 		<script src="${resource(dir:'js',file:'skel.min.js')}"></script>
 		<script src="${resource(dir:'js',file:'skel-panels.min.js')}"></script>
 		<script src="${resource(dir:'js',file:'init.js')}"></script>
-		
-		<link rel="stylesheet" href="${resource(dir:'css',file:'skel-noscript.css')}" />
-		<link rel="stylesheet" href="${resource(dir:'css',file:'style.css')}" />
-		<link rel="stylesheet" href="${resource(dir:'css',file:'style-desktop.css')}" />
+
+		<noscript>
+			<link rel="stylesheet" href="${resource(dir:'css',file:'skel-noscript.css')}" />
+			<link rel="stylesheet" href="${resource(dir:'css',file:'style.css')}" />
+			<link rel="stylesheet" href="${resource(dir:'css',file:'style-desktop.css')}" />
+		</noscript>
 		
 		<!--[if lte IE 8]><link rel="stylesheet" href="${resource(dir:'css',file:'ie8.css')}" /><![endif]-->
 		<!--[if lte IE 7]<link rel="stylesheet" href="${resource(dir:'css',file:'ie7.css')}" /><![endif]-->
