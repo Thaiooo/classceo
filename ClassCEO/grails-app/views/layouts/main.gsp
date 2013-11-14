@@ -7,7 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700" rel="stylesheet" />
-
+		<!--[if lte IE 8]><script src="${resource(dir:'js',file:'html5shiv.js')}"></script><![endif]-->
 		<script src="${resource(dir:'js',file:'jquery-1.8.3.min.js')}"></script>
 		<script src="${resource(dir:'js',file:'jquery.ui.core.min.js')}"></script>
 		<script src="${resource(dir:'js',file:'jquery.ui.datepicker.min.js')}"></script>
