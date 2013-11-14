@@ -34,8 +34,21 @@
 								</article>
 								<article id="content">
 									<p class="subtitle">Nos clients et partenaires</p>
-									<a href="#" class="image image-left"><img src="${resource(dir:'images',file:'pic07.jpg')}" alt=""></a>
-									<p>Nous satisfaisons une large clientèle d'hôtels, d'entreprises nationales et internationales, d'ambassades, de délégations, de festivals, d'agences de voyages ainsi que de nombreux particuliers.</p>
+									<table>
+										<tr>
+											<td>
+												<p>Nous satisfaisons une large clientèle d'hôtels, d'entreprises nationales et internationales, d'ambassades, de délégations, de festivals, d'agences de voyages ainsi que de nombreux particuliers.
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="http://www.arcadi.fr" class="image image-centered"><img src="${resource(dir:'images',file:'arcadi.jpg')}" alt=""></a>
+												<a href="http://www.festivalnemo.fr " class="image image-centered"><img src="${resource(dir:'images',file:'nemo.jpg')}" alt=""></a>
+												<a href="#" class="image image-centered"><img src="${resource(dir:'images',file:'pic07.jpg')}" alt=""></a>
+											</td>
+										</tr>
+									</table>
 								</article>
 								
 							</div>
